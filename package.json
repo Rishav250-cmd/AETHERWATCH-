@@ -1,0 +1,16 @@
+{
+  "name": "aetherwatch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "db:init": "node server/scripts/init-db.js"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^1.5.6-r.2",
+    "fastify": "^5.12.7"
+  }
+}
