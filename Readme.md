@@ -1,1 +1,0 @@
-Distributed Observability & Intelligence Platform

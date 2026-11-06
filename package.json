@@ -8,7 +8,13 @@
   },
   "scripts": {
     "db:init": "node server/scripts/init-db.js",
-    "db:seed": "node server/scripts/seed.js"
+    "db:seed": "node server/scripts/seed.js",
+    "db:check": "node server/scripts/check.js",
+    "db:reset": "node server/scripts/reset.js",
+    "gen:smoke": "node generator/scripts/smoke.js",
+    "gen": "node generator/src/cli.js",
+    "gen:validate": "node generator/scripts/validate.js",
+    "gen:fault": "node generator/src/cli.js --traces 1000 --fault payment"
   },
   "dependencies": {
     "@duckdb/node-api": "^1.5.6-r.2",
