@@ -11,10 +11,17 @@
     "db:seed": "node server/scripts/seed.js",
     "db:check": "node server/scripts/check.js",
     "db:reset": "node server/scripts/reset.js",
+    "server:start": "node server/src/index.js",
+    "server:dev": "node --watch server/src/index.js",
+    "ingest:test": "node server/scripts/test-ingest.js",
+    "ingest:http-test": "node server/scripts/test-http.js",
     "gen:smoke": "node generator/scripts/smoke.js",
     "gen": "node generator/src/cli.js",
     "gen:validate": "node generator/scripts/validate.js",
-    "gen:fault": "node generator/src/cli.js --traces 1000 --fault payment"
+    "gen:fault": "node generator/src/cli.js --traces 1000 --fault payment",
+    "gen:send": "node generator/src/cli.js --traces 1000 --send http://localhost:4318",
+    "gen:live": "node generator/src/cli.js --continuous --rate 20 --send http://localhost:4318",
+    "gen:live:fault": "node generator/src/cli.js --continuous --rate 20 --fault payment --send http://localhost:4318"
   },
   "dependencies": {
     "@duckdb/node-api": "^1.5.6-r.2",
